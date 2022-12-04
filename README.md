@@ -16,7 +16,9 @@ Following steps will help you add this library as a dependency in your flutter p
 
 ```yaml
 dependencies:
-  video_editor: ^2.1.0
+    video_editor:
+    git:
+      url: https://github.com/elnegrito007/video_editor.git
   ffmpeg_kit_flutter: ^5.1.0 //place compatible version 
 ```
 
