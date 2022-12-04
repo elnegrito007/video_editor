@@ -6,8 +6,6 @@
 
 A video editor that allows to edit (trim, crop, rotate and scale) and choose a cover with a very flexible UI design.
 
-The exportation is made using [ffmpeg_kit_flutter](https://pub.dev/packages/ffmpeg_kit_flutter) library.
-
 This library is written in Dart only but uses external packages such as [ffmpeg_kit_flutter](https://pub.dev/packages/ffmpeg_kit_flutter) and [video_thumbnail](https://pub.dev/packages/video_thumbnail), which makes it available only on iOS and Android plaforms for now.
 
 ## 📖 Installation
@@ -19,6 +17,7 @@ Following steps will help you add this library as a dependency in your flutter p
 ```yaml
 dependencies:
   video_editor: ^2.1.0
+  ffmpeg_kit_flutter: ^5.1.0 //place compatible version 
 ```
 
 - Import the package in your code:
@@ -209,28 +208,7 @@ You can create your own CoverStyle class to customize the CoverSelection apparea
 | double borderWidth = 2 | The `borderWidth` param specifies the width of the border around each cover thumbnails |
 | double borderRadius = 5.0 | The `borderRadius` param specifies the border radius of each cover thumbnail |
 
-</details>
-
-## 💭 FAQ
-
-### 1. How to use FFmpeg LTS release
-
-Since [v1.3.0](https://github.com/LeGoffMael/video_editor/releases/tag/v1.3.0), video_editor uses ffmpeg_kit_flutter main release which supports the latest features. If you want to support a wider range of devices you should use the LTS release. [more info](https://github.com/arthenica/ffmpeg-kit/tree/main/flutter/flutter#24-lts-releases)
-
-
-To do this, add this to your `pubspec.yaml`:
-```yaml
-dependency_overrides:
-  ffmpeg_kit_flutter_min_gpl: ^5.1.0-LTS
-```
-
-On Android, if it gives a `minSdkVersion` error, try adding the following in `/android/app/src/main/AndroidManifest.xml`.
-
-```xml
-<manifest xmlns:android=... package=... xmlns:tools="http://schemas.android.com/tools" >
-  <uses-sdk tools:overrideLibrary="com.arthenica.ffmpegkit.flutter"/>
-</manifest>
-```
+  </details>
 
 ## ✨ Credit
 
